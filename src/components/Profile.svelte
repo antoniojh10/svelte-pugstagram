@@ -1,3 +1,8 @@
+<script>
+  export let name = '' 
+  export let nickname = '' 
+</script>
+
 <div class="Profile">
   <div class="Profile-content">
     <div class="Profile-avatar">
@@ -7,8 +12,8 @@
       />
     </div>
     <div class="Profile-info">
-      <h2>antoniojh10</h2>
-      <span>Antonio Hernández</span>
+      <h2>{nickname}</h2>
+      <span>{name}</span>
     </div>
   </div>
 </div>

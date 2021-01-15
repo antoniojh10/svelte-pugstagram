@@ -1,3 +1,7 @@
+<script>
+  export let nickname = ''
+</script>
+
 <div class="Stories">
   <div class="Stories-container">
     <div class="Stories-head">
@@ -13,7 +17,7 @@
           />
         </div>
         <h2>
-          antoniojh10
+          {nickname}
           <span>10 horas antes</span>
         </h2>
       </div>
