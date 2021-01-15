@@ -1,5 +1,21 @@
 <script>
   export let comments = [];
+
+  let newComment = "";
+
+  function addComment() {
+    if (newComment.length > 3) {
+      comments = [
+        ...comments,
+        {
+          id: Date.now(),
+          username: "antoniojh10",
+          text: newComment
+        }
+      ];
+      newComment = "";
+    }
+  }
 </script>
 
 <div class="Comments">
@@ -11,12 +27,13 @@
       </div>
     {/each}
     <div class="Comments-add">
-      <form>
+      <form on:submit|preventDefault={addComment}>
         <input
           id="text"
           type="text"
           class="Comments-input"
           placeholder="Agregar Comentario..."
+          bind:value={newComment}
         />
         <button type="submit">Post</button>
       </form>
