@@ -3,15 +3,15 @@
   import Stories from "./Stories.svelte";
   import Footer from "./Footer.svelte";
 
-  export let nickname = ''
-  export let name = ''
-
+  export let nickname = "";
+  export let name = "";
+  export let avatar = "";
 </script>
 
 <div class="Sidebar">
   <div class="Sidebar-container">
-    <Profile {nickname} {name} />
-    <Stories {nickname} />
+    <Profile {nickname} {name} {avatar} />
+    <Stories {nickname} {avatar} />
     <Footer />
   </div>
 </div>
